@@ -6,21 +6,6 @@ Projeto desenvolvido para a **Atividade 02** da disciplina de Desenvolvimento We
 
 Pokédex construída com **Next.js 14** e **React**, consumindo a [PokéAPI](https://pokeapi.co/) (API pública e gratuita).
 
-## ✅ Requisitos Atendidos
-
-| Requisito | Implementação |
-|---|---|
-| Projeto em React + Next.js | ✅ Next.js 14 com App Router |
-| Consumo de API pública | ✅ PokéAPI (`https://pokeapi.co/api/v2/`) |
-| UI componentizada | ✅ `Header`, `PokemonCard`, `TypeBadge`, `LoadingSpinner` |
-| CSS Modules | ✅ Cada componente possui seu próprio `.module.css` |
-| CSS Global | ✅ `src/app/globals.css` (variáveis, reset, body, scrollbar) |
-| `useState` | ✅ Usado na listagem (`pokemons`, `loading`, `offset`, `search`) |
-| `useEffect` | ✅ Busca inicial da lista e busca de detalhes do pokémon |
-| Props | ✅ `PokemonCard` recebe `pokemon`; `TypeBadge` recebe `type` e `large`; `Header` recebe `search` e `onSearch`; `LoadingSpinner` recebe `small` |
-| Lista de registros | ✅ Grid com os primeiros 20 pokémons + botão "Carregar mais" |
-| Registro único | ✅ Página `/pokemon/[name]` com stats, habilidades, descrição, info |
-
 ## 🚀 Como Rodar
 
 ```bash
