@@ -1,0 +1,94 @@
+/* src/components/PokemonCard/PokemonCard.module.css */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.25rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(255, 203, 5, 0.07), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 203, 5, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Type-based accent on hover */
+.card[data-type="fire"]:hover     { border-color: var(--type-fire); }
+.card[data-type="water"]:hover    { border-color: var(--type-water); }
+.card[data-type="grass"]:hover    { border-color: var(--type-grass); }
+.card[data-type="electric"]:hover { border-color: var(--type-electric); }
+.card[data-type="psychic"]:hover  { border-color: var(--type-psychic); }
+.card[data-type="ice"]:hover      { border-color: var(--type-ice); }
+.card[data-type="dragon"]:hover   { border-color: var(--type-dragon); }
+.card[data-type="dark"]:hover     { border-color: var(--type-dark); }
+.card[data-type="fairy"]:hover    { border-color: var(--type-fairy); }
+.card[data-type="ghost"]:hover    { border-color: var(--type-ghost); }
+
+.number {
+  align-self: flex-end;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.image {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 203, 5, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.types {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
